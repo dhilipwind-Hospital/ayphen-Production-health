@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Open Sans', 'Roboto', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-scope-bills {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .print-scope-bills .ant-table-pagination { display: none !important; }
+  .print-scope-bills .ant-table { font-size: 12px; }
+  .print-scope-bills .ant-table-thead > tr > th,
+  .print-scope-bills .ant-table-tbody > tr > td {
+    padding: 6px 8px !important;
+  }
+  .print-scope-bills .ant-table-tbody > tr { page-break-inside: avoid; }
+
+  /* Medical Records print scope */
+  .print-scope-records {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .print-scope-records .ant-table-pagination { display: none !important; }
+  .print-scope-records .ant-table { font-size: 12px; }
+  .print-scope-records .ant-table-thead > tr > th,
+  .print-scope-records .ant-table-tbody > tr > td {
+    padding: 6px 8px !important;
+  }
+  .print-scope-records .ant-table-tbody > tr { page-break-inside: avoid; }
+  @page { margin: 10mm; }
+}

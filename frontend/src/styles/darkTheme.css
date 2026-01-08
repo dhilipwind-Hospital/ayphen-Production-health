@@ -1,0 +1,130 @@
+/* Dark theme styles */
+:root.dark-theme {
+  --bg-primary: #121212;
+  --bg-secondary: #1f1f1f;
+  --bg-elevated: #2d2d2d;
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.12);
+}
+
+:root.dark-theme body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Override Ant Design components in dark mode */
+:root.dark-theme .ant-layout {
+  background-color: var(--bg-primary);
+}
+
+:root.dark-theme .ant-layout-header {
+  background-color: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+:root.dark-theme .ant-card {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+:root.dark-theme .ant-typography {
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-typography.ant-typography-secondary {
+  color: var(--text-secondary);
+}
+
+:root.dark-theme .ant-form-item-label > label {
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-input {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-select-selector {
+  background-color: var(--bg-elevated) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-select-selection-item {
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-select-dropdown {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-color);
+}
+
+:root.dark-theme .ant-select-item {
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: rgba(24, 144, 255, 0.2);
+}
+
+:root.dark-theme .ant-tabs-tab {
+  color: var(--text-secondary);
+}
+
+:root.dark-theme .ant-tabs-tab-active {
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-divider {
+  border-color: var(--border-color);
+}
+
+:root.dark-theme .ant-divider-inner-text {
+  color: var(--text-secondary);
+}
+
+:root.dark-theme .ant-radio-button-wrapper {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+:root.dark-theme .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background-color: #177ddc;
+  border-color: #177ddc;
+  color: #fff;
+}
+
+:root.dark-theme .ant-collapse {
+  background-color: transparent;
+  border-color: var(--border-color);
+}
+
+:root.dark-theme .ant-collapse-header {
+  color: var(--text-primary) !important;
+}
+
+:root.dark-theme .ant-collapse-content {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+/* High contrast mode */
+:root.high-contrast-mode {
+  --text-primary: #ffffff;
+  --text-secondary: #eeeeee;
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --bg-elevated: #1a1a1a;
+  --border-color: #ffffff;
+}
+
+:root.high-contrast-mode .ant-btn {
+  border-width: 2px;
+}
+
+:root.high-contrast-mode .ant-form-item-label > label {
+  font-weight: bold;
+}

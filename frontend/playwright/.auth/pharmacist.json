@@ -1,0 +1,26 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:3000",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhODkxYWZlMS00ZGU3LTRiNmItOTEwNi1mY2VkYTFiNGQ5NDEiLCJlbWFpbCI6InBoYXJtYWNpc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoicGhhcm1hY2lzdCIsImlhdCI6MTc1OTc0NjMxMywiZXhwIjoxNzU5NzQ3MjEzfQ.nuKVotsT_rZTUZNDi3Ddy4AHqsj1JGiG4hgpjkshOFY"
+        },
+        {
+          "name": "refreshToken",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhODkxYWZlMS00ZGU3LTRiNmItOTEwNi1mY2VkYTFiNGQ5NDEiLCJlbWFpbCI6InBoYXJtYWNpc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoicGhhcm1hY2lzdCIsImlhdCI6MTc1OTc0NjMxMywiZXhwIjoxNzYwMzUxMTEzfQ.9O0kyGjoorLJE61itv2YjVoWZwmEetMyEumrrACP9-E"
+        },
+        {
+          "name": "auth_storage",
+          "value": "local"
+        },
+        {
+          "name": "hms_sider_collapsed",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}

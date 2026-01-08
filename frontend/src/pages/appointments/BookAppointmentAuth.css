@@ -1,0 +1,324 @@
+/* Book Appointment Enhanced Styles */
+
+/* Main Container */
+.book-appointment-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Page Title */
+.book-appointment-title {
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  border-color: #EC407A;
+  box-shadow: 0 2px 8px rgba(236, 64, 122, 0.1);
+}
+
+.form-section .ant-card-head {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+}
+
+.form-section .ant-card-body {
+  padding: 20px;
+}
+
+/* Time Slots */
+.time-slots-container {
+  margin-top: 16px;
+}
+
+.time-period {
+  margin-bottom: 24px;
+}
+
+.time-period-title {
+  margin-bottom: 12px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.time-slot {
+  height: 44px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.time-slot.available:hover {
+  background: #fef2f7;
+  border-color: #EC407A;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(236, 64, 122, 0.2);
+}
+
+.time-slot.selected {
+  background: #EC407A;
+  color: white;
+  border-color: #EC407A;
+}
+
+.time-slot.booked {
+  background: #f5f5f5;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+.time-slot.booked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Confirmation Summary */
+.confirmation-summary {
+  margin-bottom: 16px;
+  border: 2px solid #EC407A;
+  background: #fef2f7;
+  border-radius: 8px;
+}
+
+.confirmation-summary .ant-card-head {
+  background: white;
+  border-bottom: 2px solid #EC407A;
+}
+
+.confirmation-summary .ant-descriptions-item-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.confirmation-summary .ant-descriptions-item-content {
+  color: #1f2937;
+}
+
+/* Primary Button */
+.ant-btn-primary {
+  background: #EC407A;
+  border-color: #EC407A;
+  height: 44px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary:hover {
+  background: #d81b60;
+  border-color: #d81b60;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(236, 64, 122, 0.3);
+}
+
+.ant-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.ant-btn-default {
+  height: 44px;
+  border-radius: 6px;
+  border-color: #e5e7eb;
+}
+
+.ant-btn-default:hover {
+  border-color: #EC407A;
+  color: #EC407A;
+}
+
+/* Form Items */
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Select & Input */
+.ant-select-selector,
+.ant-input,
+.ant-input-textarea,
+.ant-picker {
+  border-radius: 6px;
+  border-color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.ant-select-selector:hover,
+.ant-input:hover,
+.ant-input-textarea:hover,
+.ant-picker:hover {
+  border-color: #EC407A;
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-input:focus,
+.ant-input-textarea:focus,
+.ant-picker-focused {
+  border-color: #EC407A;
+  box-shadow: 0 0 0 2px rgba(236, 64, 122, 0.1);
+}
+
+/* Radio Buttons */
+.ant-radio-button-wrapper {
+  height: 44px;
+  line-height: 42px;
+  padding: 0 20px;
+  border-radius: 6px;
+  border-color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.ant-radio-button-wrapper:hover {
+  color: #EC407A;
+}
+
+.ant-radio-button-wrapper-checked {
+  background: #fef2f7;
+  border-color: #EC407A;
+  color: #EC407A;
+}
+
+.ant-radio-button-wrapper-checked:hover {
+  background: #fce4ec;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-overlay p {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Success Modal */
+.success-modal .ant-modal-content {
+  border-radius: 12px;
+}
+
+.success-modal .ant-result-title {
+  color: #EC407A;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Cards */
+.ant-card {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Alert */
+.ant-alert {
+  border-radius: 6px;
+}
+
+/* Tags */
+.ant-tag {
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-appointment-container {
+    padding: 16px;
+  }
+
+  .slot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .time-slot {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+/* Section Icons */
+.section-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Helper Text */
+.helper-text {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Required Field Indicator */
+.ant-form-item-required::before {
+  color: #EC407A !important;
+}
+
+/* Disabled State */
+.ant-btn-primary:disabled {
+  background: #f5f5f5;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+}
+
+.ant-btn-primary:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}

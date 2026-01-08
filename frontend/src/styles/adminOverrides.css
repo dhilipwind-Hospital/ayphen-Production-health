@@ -1,0 +1,172 @@
+/* Admin Portal - Neutral Card Styling Override */
+
+/* Force remove ALL pink borders from admin pages */
+.ant-layout-content * {
+  border-color: #e5e7eb !important;
+}
+
+/* Remove pink borders from admin page cards and tables */
+.ant-layout-content .ant-card {
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  background: white !important;
+}
+
+/* Keep white background for cards */
+.ant-layout-content .ant-card-body {
+  background: white !important;
+}
+
+.ant-layout-content .ant-card-head {
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Neutral table styling */
+.ant-layout-content .ant-table {
+  border-color: #e5e7eb !important;
+  background: white !important;
+}
+
+.ant-layout-content .ant-table-thead > tr > th {
+  background: #f9fafb !important;
+  border-color: #e5e7eb !important;
+  color: #374151;
+  font-weight: 600;
+}
+
+.ant-layout-content .ant-table-tbody > tr > td {
+  border-color: #e5e7eb !important;
+  background: white !important;
+}
+
+.ant-layout-content .ant-table-tbody > tr:hover > td {
+  background: #f9fafb !important;
+}
+
+/* Remove pink from tabs */
+.ant-layout-content .ant-tabs-nav {
+  background: white !important;
+}
+
+.ant-layout-content .ant-tabs-tab {
+  background: transparent !important;
+  border-color: #e5e7eb !important;
+}
+
+.ant-layout-content .ant-tabs-tab-active {
+  border-color: #e5e7eb !important;
+  border-bottom-color: white !important;
+}
+
+.ant-layout-content .ant-tabs-ink-bar {
+  background: #0ea5a5 !important;
+}
+
+/* Remove pink from form items */
+.ant-layout-content .ant-form-item {
+  background: transparent !important;
+}
+
+/* Neutral dividers */
+.ant-layout-content .ant-divider {
+  border-color: #e5e7eb !important;
+}
+
+/* Neutral space and layout backgrounds */
+.ant-layout-content .ant-space,
+.ant-layout-content .ant-row,
+.ant-layout-content .ant-col {
+  background: transparent !important;
+}
+
+/* Keep pink for primary buttons only */
+.ant-layout-content .ant-btn-primary {
+  background: #EC407A;
+  border-color: #EC407A;
+}
+
+.ant-layout-content .ant-btn-primary:hover {
+  background: #d81b60 !important;
+  border-color: #d81b60 !important;
+}
+
+/* Neutral borders for inputs and selects */
+.ant-layout-content .ant-input,
+.ant-layout-content .ant-input-number,
+.ant-layout-content .ant-select-selector {
+  border-color: #e5e7eb !important;
+}
+
+.ant-layout-content .ant-input:hover,
+.ant-layout-content .ant-input:focus,
+.ant-layout-content .ant-input-number:hover,
+.ant-layout-content .ant-input-number:focus,
+.ant-layout-content .ant-select-selector:hover,
+.ant-layout-content .ant-select-focused .ant-select-selector {
+  border-color: #EC407A !important;
+}
+
+/* Neutral pagination */
+.ant-layout-content .ant-pagination-item {
+  border-color: #e5e7eb;
+}
+
+.ant-layout-content .ant-pagination-item-active {
+  border-color: #EC407A;
+  background: #fef2f7;
+}
+
+.ant-layout-content .ant-pagination-item-active a {
+  color: #EC407A;
+}
+
+/* Neutral modals */
+.ant-modal-content {
+  border-color: #e5e7eb !important;
+  background: white !important;
+}
+
+.ant-modal-header {
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.ant-modal-body {
+  background: white !important;
+}
+
+.ant-modal-footer {
+  background: white !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+
+/* Neutral drawer */
+.ant-drawer-content {
+  border-color: #e5e7eb !important;
+  background: white !important;
+}
+
+.ant-drawer-header {
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.ant-drawer-body {
+  background: white !important;
+}
+
+/* White background for full content area */
+.ant-layout-content {
+  background: white !important;
+}
+
+/* Ensure all content wrappers are white */
+.ant-layout-content > div {
+  background: transparent !important;
+}
+
+/* White background for the entire layout */
+.ant-layout {
+  background: white !important;
+}

@@ -1,0 +1,224 @@
+.org-selection-modal .ant-modal-content {
+  height: 100vh;
+  border-radius: 0;
+}
+
+.org-selection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.org-selection-header {
+  margin-bottom: 40px;
+}
+
+.org-selection-icon {
+  font-size: 4rem;
+  color: #1890ff;
+  margin-bottom: 16px;
+}
+
+.org-selection-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #1890ff;
+  font-weight: 600;
+}
+
+.org-selection-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.org-selection-note {
+  font-size: 0.9rem !important;
+  color: #999 !important;
+  font-style: italic;
+}
+
+.org-selection-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-selection-search {
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.org-selection-search .ant-input-search {
+  flex: 1;
+}
+
+.refresh-btn {
+  color: #1890ff;
+}
+
+.org-selection-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.org-selection-loading p {
+  margin-top: 16px;
+  font-size: 1.1rem;
+}
+
+.org-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.org-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.org-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(24, 144, 255, 0.2);
+  border-color: #1890ff;
+}
+
+.org-info {
+  padding: 8px;
+}
+
+.org-info h3 {
+  margin-bottom: 8px;
+  color: #1890ff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.org-subdomain {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.org-description {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.org-plan {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.org-plan.basic {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.org-plan.professional {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+
+.org-plan.enterprise {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+.org-selection-empty {
+  grid-column: 1 / -1;
+  padding: 60px 20px;
+}
+
+.org-selection-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.join-hospital-btn {
+  color: #1890ff;
+  font-size: 1rem;
+}
+
+.skip-btn {
+  background: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  color: #666;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .org-selection-container {
+    padding: 20px 16px;
+  }
+  
+  .org-selection-header h1 {
+    font-size: 2rem;
+  }
+  
+  .org-selection-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .org-selection-search {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .org-selection-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Animation for modal entrance */
+.org-selection-modal.ant-modal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

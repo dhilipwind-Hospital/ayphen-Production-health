@@ -1,0 +1,232 @@
+/* Settings Page Styles */
+.settings-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white !important;
+}
+
+/* Force white/neutral backgrounds for Settings page */
+.settings-page .ant-card {
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.settings-page .ant-card-head {
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.settings-page .ant-card-body {
+  background: white !important;
+}
+
+.settings-page .ant-tabs-content {
+  background: white !important;
+}
+
+.settings-section {
+  margin-bottom: 24px;
+  background: white !important;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9fafb !important;
+  border: 1px solid #e5e7eb;
+}
+
+.theme-dark .setting-item {
+  background-color: var(--item-bg-color-dark, #2a2a2a);
+}
+
+/* Override any pink/magenta backgrounds */
+.settings-page .ant-tabs-nav {
+  background: white !important;
+}
+
+.settings-page .ant-tabs-tab {
+  background: transparent !important;
+}
+
+.settings-page .ant-tabs-tab-active {
+  background: transparent !important;
+}
+
+.settings-page .ant-divider {
+  border-color: #e5e7eb !important;
+}
+
+/* Ensure table backgrounds are white */
+.settings-page table {
+  background: white !important;
+}
+
+.settings-page table th,
+.settings-page table td {
+  background: white !important;
+  border-color: #e5e7eb !important;
+}
+
+.settings-page table thead th {
+  background: #f9fafb !important;
+}
+
+/* Fix any Title backgrounds */
+.settings-page .ant-typography {
+  background: transparent !important;
+}
+
+/* Theme Styles */
+:root {
+  --base-font-size: 16px;
+  --primary-color: #1890ff;
+  --text-color: rgba(0, 0, 0, 0.85);
+  --bg-color: #ffffff;
+  --component-bg: #ffffff;
+  --border-color: #d9d9d9;
+  --item-bg-color: #f9fafb;
+  --header-bg: #ffffff;
+  --sidebar-bg: #ffffff;
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --transition-duration: 0.3s;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --text-color: rgba(255, 255, 255, 0.85);
+  --bg-color: #141414;
+  --component-bg: #1f1f1f;
+  --border-color: #434343;
+  --item-bg-color-dark: #2a2a2a;
+  --header-bg: #1f1f1f;
+  --sidebar-bg: #1f1f1f;
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Font Sizes */
+.font-small {
+  --base-font-size: 14px;
+}
+
+.font-medium {
+  --base-font-size: 16px;
+}
+
+.font-large {
+  --base-font-size: 18px;
+}
+
+body {
+  font-size: var(--base-font-size);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+/* Force white background for body */
+body {
+  background: white !important;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --component-bg: #1a1a1a;
+  --border-color: #ffffff;
+  --primary-color: #ffff00;
+  --item-bg-color: #333333;
+  --item-bg-color-dark: #333333;
+}
+
+/* Reduced Motion */
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Large Text (beyond font size setting) */
+.large-text {
+  --base-font-size: 20px;
+}
+
+.large-text h1 {
+  font-size: 2.5em;
+}
+
+.large-text h2 {
+  font-size: 2em;
+}
+
+.large-text h3 {
+  font-size: 1.75em;
+}
+
+.large-text h4 {
+  font-size: 1.5em;
+}
+
+.large-text p, .large-text span, .large-text button, .large-text input, .large-text select, .large-text textarea {
+  font-size: 1.2em;
+}
+
+/* Apply to Ant Design components */
+.ant-layout {
+  background-color: var(--bg-color);
+}
+
+.ant-layout-header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ant-layout-sider {
+  background-color: var(--sidebar-bg);
+}
+
+.ant-menu {
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
+}
+
+.ant-card {
+  background-color: var(--component-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.ant-table {
+  background-color: var(--component-bg);
+  color: var(--text-color);
+}
+
+.ant-table-thead > tr > th {
+  background-color: var(--item-bg-color, #f5f5f5);
+  color: var(--text-color);
+}
+
+.theme-dark .ant-table-thead > tr > th {
+  background-color: var(--item-bg-color-dark, #2a2a2a);
+}
+
+.ant-btn {
+  transition: all var(--transition-duration);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .setting-item > *:last-child {
+    margin-top: 8px;
+  }
+}
