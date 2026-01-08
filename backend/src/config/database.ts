@@ -57,6 +57,11 @@ export const AppDataSource = new DataSource({
   password: process.env.DB_PASSWORD || 'postgres',
   database: process.env.DB_NAME || 'hospital_db',
   entities: [Organization, User, Role, SystemRoleCustomization, Notification, Service, Department, Appointment, RefreshToken, MedicalRecord, Bill, AvailabilitySlot, Referral, Report, EmergencyRequest, CallbackRequest, Plan, Policy, Claim, AppointmentHistory, Medicine, Prescription, PrescriptionItem, MedicineTransaction, LabTest, LabOrder, LabOrderItem, LabSample, LabResult, ConsultationNote, Ward, Room, Bed, Admission, NursingNote, VitalSign, MedicationAdministration, DoctorNote, DischargeSummary, Visit, QueueItem, Triage, VisitCounter, DoctorAvailability, AppointmentFeedback, PasswordResetToken],
+  // ⚠️ SSL is required for Supabase in production
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  extra: {
+    connectionTimeoutMillis: 10000,
+  },
   migrations: [__dirname + '/../migrations/*.{ts,js}'],
   // ⚠️ CAUTION: synchronize: true should be disabled after the first deployment to prevent data loss!
   synchronize: true, // Enabled for initial production deployment to create tables
