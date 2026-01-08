@@ -58,7 +58,8 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_NAME || 'hospital_db',
   entities: [Organization, User, Role, SystemRoleCustomization, Notification, Service, Department, Appointment, RefreshToken, MedicalRecord, Bill, AvailabilitySlot, Referral, Report, EmergencyRequest, CallbackRequest, Plan, Policy, Claim, AppointmentHistory, Medicine, Prescription, PrescriptionItem, MedicineTransaction, LabTest, LabOrder, LabOrderItem, LabSample, LabResult, ConsultationNote, Ward, Room, Bed, Admission, NursingNote, VitalSign, MedicationAdministration, DoctorNote, DischargeSummary, Visit, QueueItem, Triage, VisitCounter, DoctorAvailability, AppointmentFeedback, PasswordResetToken],
   migrations: [__dirname + '/../migrations/*.{ts,js}'],
-  synchronize: process.env.NODE_ENV !== 'production',
+  // ⚠️ CAUTION: synchronize: true should be disabled after the first deployment to prevent data loss!
+  synchronize: true, // Enabled for initial production deployment to create tables
   logging: process.env.NODE_ENV === 'development',
 });
 
