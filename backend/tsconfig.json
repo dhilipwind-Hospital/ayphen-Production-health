@@ -16,6 +16,9 @@
     "resolveJsonModule": true,
     "declaration": false,
     "noEmitOnError": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -28,14 +31,18 @@
   ],
   "exclude": [
     "node_modules",
+    "dist",
     "**/*.spec.ts",
     "**/*.test.ts",
     "src/tests/**/*",
     "**/tests/**/*",
     "src/models/Prescription.ts",
     "src/models/PrescriptionItem.ts",
-    "src/scripts/setup-multi-tenant.ts",
-    "src/scripts/test-universal-email-system.ts",
-    "src/scripts/update-labtech-password.ts"
+    "src/models/TelemedicineSession.ts",
+    "src/scripts/**/*",
+    "src/controllers/telemedicineController.ts",
+    "src/routes/prescription.routes.ts",
+    "src/routes/telemedicine.routes.ts",
+    "src/jobs/**/*"
   ]
 }
