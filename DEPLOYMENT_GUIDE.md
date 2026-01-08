@@ -26,28 +26,130 @@
 
 # 🗄️ STEP 1: Set Up Supabase Database
 
-## 1.1 Create Supabase Project
+## 1.1 Create Supabase Account (If New)
 
-1. Go to [supabase.com](https://supabase.com) and sign in
-2. Click **"New Project"**
-3. Fill in:
-   - **Name**: `ayphen-hospital-prod`
-   - **Database Password**: Create a strong password ⚠️ **SAVE THIS!**
-   - **Region**: Choose `Singapore` (closest to India)
-4. Click **"Create new project"** and wait 2-3 minutes
+1. Go to [supabase.com](https://supabase.com)
+2. Click **"Start your project"** or **"Sign In"**
+3. Sign up with:
+   - **GitHub** (recommended) - Click "Continue with GitHub"
+   - **Or** use Email/Password
 
-## 1.2 Get Database Connection Details
+---
 
-1. In Supabase Dashboard, go to **Settings** (gear icon) → **Database**
-2. Scroll down to **"Connection string"** section
-3. Click **"URI"** tab and copy the connection details:
+## 1.2 Create a New Organization
 
-| Variable | Where to Find |
-|----------|---------------|
-| `DB_HOST` | `db.xxxxxxxxxx.supabase.co` (from connection string) |
-| `DB_PORT` | `5432` |
-| `DB_USER` | `postgres` |
-| `DB_PASSWORD` | Your database password you saved |
+> ⚠️ Organizations in Supabase help you manage multiple projects and team members.
+
+### Step-by-Step:
+
+1. After logging in, click on your **profile icon** (top right)
+2. Click **"Create new organization"** or go to **Settings** → **Organizations**
+3. Fill in the organization details:
+
+| Field | Value |
+|-------|-------|
+| **Organization name** | `Ayphen Hospital` |
+| **Type** | `Personal` or `Company` |
+| **Billing email** | `your-email@example.com` |
+
+4. Click **"Create organization"**
+
+---
+
+## 1.3 Create New Project
+
+### Step-by-Step:
+
+1. From the Supabase dashboard, click **"+ New project"** (green button, top right)
+2. Select your organization: **"Ayphen Hospital"**
+3. Fill in the project details:
+
+| Field | Value |
+|-------|-------|
+| **Name** | `ayphen-hospital-prod` |
+| **Database Password** | Create a strong password (e.g., `Hospital@Prod2026!`) |
+| **Region** | `South Asia (Mumbai) - ap-south-1` |
+| **Pricing Plan** | `Free` (can upgrade later) |
+
+### ⚠️ CRITICAL: Save Your Database Password!
+
+```
+📝 DATABASE PASSWORD: ________________________
+   (Write it down NOW - you cannot recover it later!)
+```
+
+4. Click **"Create new project"**
+5. Wait **2-3 minutes** for the project to initialize
+
+---
+
+## 1.4 Get Database Connection Details
+
+Once your project is ready:
+
+### Step-by-Step:
+
+1. In the left sidebar, click **⚙️ Settings** (gear icon at the bottom)
+2. Click **"Database"** under Configuration
+3. Scroll down to find **"Connection string"** section
+4. Click on **"URI"** tab
+
+### Copy These Values:
+
+| Variable | Where to Find | Example |
+|----------|---------------|---------|
+| `DB_HOST` | Host field | `db.abcdefghij.supabase.co` |
+| `DB_PORT` | Port field | `5432` (default) or `6543` (pooling) |
+| `DB_USER` | User field | `postgres` |
+| `DB_PASSWORD` | The password you saved | `Hospital@Prod2026!` |
+| `DB_NAME` | Database field | `postgres` |
+
+### Alternative: Copy Full Connection String
+
+In the **"Connection string"** section, you can also copy:
+```
+postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxx.supabase.co:5432/postgres
+```
+
+---
+
+## 1.5 Configure Database Settings (Optional but Recommended)
+
+### Enable Connection Pooling (For Better Performance):
+
+1. Go to **Settings** → **Database**
+2. Scroll to **"Connection Pooling"**
+3. Toggle it **ON**
+4. Note: When pooling is enabled, use port `6543` instead of `5432`
+
+### Set Up SSL Mode:
+
+For production, ensure SSL is enabled:
+- Connection mode: `require` (default)
+
+---
+
+## 1.6 Quick Reference Card
+
+Save this information:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              SUPABASE DATABASE CREDENTIALS              │
+├─────────────────────────────────────────────────────────┤
+│ Project:     ayphen-hospital-prod                       │
+│ Region:      South Asia (Mumbai)                        │
+│                                                         │
+│ DB_HOST:     db.xxxxxxxxxx.supabase.co                  │
+│ DB_PORT:     5432 (or 6543 for pooling)                 │
+│ DB_USER:     postgres                                   │
+│ DB_PASSWORD: [YOUR PASSWORD]                            │
+│ DB_NAME:     postgres                                   │
+│                                                         │
+│ Connection String:                                      │
+│ postgresql://postgres:[PASS]@db.xxx.supabase.co:5432/   │
+└─────────────────────────────────────────────────────────┘
+```
 | `DB_NAME` | `postgres` |
 
 ## 1.3 Enable Connection from External Services
