@@ -70,6 +70,20 @@ export const AppDataSource = new DataSource({
 
 // Backward-compatible wrapper used by server.ts
 export const createDatabaseConnection = async () => {
+  try {
+    // 🛡️ FORCE IPv4: Resolve hostname to IPv4 to avoid ENETUNREACH on Render (IPv6 issues)
+    const host = process.env.DB_HOST;
+    if (host && !host.includes('localhost') && require('net').isIP(host) === 0) {
+      console.log(` 🔍 Resolving DNS for ${host}...`);
+      const { promises: dns } = require('dns');
+      const [ip] = await dns.resolve4(host);
+      console.log(` ✅ Resolved to IPv4: ${ip}`);
+      AppDataSource.setOptions({ host: ip });
+    }
+  } catch (error) {
+    console.warn(' ⚠️ IPv4 resolution failed, falling back to original host:', error);
+  }
+
   if (!AppDataSource.isInitialized) {
     await AppDataSource.initialize();
   }
